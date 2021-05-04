@@ -1,0 +1,172 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block css%}
+
+
+   <style>
+h3 {
+    color: #00ffd0
+}
+
+.text {
+    color: #00eeff;
+    text-align: center
+}
+
+.folded-corner:hover .text {
+    visibility: visible;
+    color: #3903ff;
+}
+
+.Services-tab {
+    margin-top: 80px
+}
+
+.folded-corner {
+    padding: 100px 25px;
+    margin-bottom: 50px;
+    position: relative;
+    font-size: 100%;
+    text-decoration: none;
+    color: #999;
+    background: transparent;
+    transition: all ease .5s;
+    border: 1px solid #00f2a9
+}
+
+.folded-corner:hover {
+    background-color: #00f8cb
+}
+
+.folded-corner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 0px 0px 0;
+    border-color: #ddd #000;
+    transition: all ease .3s
+}
+
+.folded-corner:hover:before {
+    background-color: #00ffe5;
+    border-width: 0 50px 50px 0;
+    border-color: #eee rgb(0, 0, 0)
+}
+
+.service_tab_1 {
+    background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));
+}
+
+.service_tab_1:hover .fa-icon-image {
+    color: #000;
+    transform: scale(1.5)
+}
+
+.fa-icon-image {
+    color: #ffffff;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size-adjust: none;
+    font-stretch: normal;
+    text-rendering: auto;
+    transition: all .65s linear 0s;
+    text-align: center;
+    transition: all 1s cubic-bezier(.99, .82, .11, 1.41)
+}
+
+</style>
+        {% endblock %}
+        {% block content %}
+            <!-- ***** Preloader Start ***** -->
+            <div id="js-preloader" class="js-preloader">
+                <div class="preloader-inner">
+                  <span class="dot"></span>
+                  <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Preloader End ***** -->
+          <!--header-->
+          <div><img src="{% static "myapp/assets/images/care1.png" %}" class="img-fluid" alt="Responsive image"></div>
+
+    
+    <section class="section section-bg" id="call-to-action" style="background-image:  linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content" style="text-align: center; padding-bottom: 50px;">
+                        <br>
+                        <br>
+                        <h2 style="color: #00ffe5;">How would you like to sell your car ?</h2>
+                        <p style="color: #ffffff;">Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 Services-tab item">
+                    <div class="folded-corner service_tab_1">
+                        <div class="text"> <i class="fa fa-image fa-5x fa-icon-image"></i>
+                            <p style="padding: 10px;" class="item-title">
+                                <h3>Sell your car in 1 visit</h3>
+                            </p><!-- /.item-title -->
+                            <p>Get the best price of your car</p>
+                            <p>Free home Inspection</p>
+                            <p>Hassle free RC Transfer</p>
+                            <a class="btn btn-outline-primary theme-button" href="/appointment"
+              >Sell to Car Infinity</a
+            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 Services-tab item">
+                    <div class="folded-corner service_tab_1">
+                        <div class="text"> <i class="fa fa-lightbulb fa-5x fa-icon-image"></i>
+                            <p style="padding: 10px;"  class="item-title">
+                                <h3>Post your free Ad</h3>
+                            </p><!-- /.item-title -->
+                            <p>Post your free Ad in 5 min</p>
+                            <p>Chat with multiple buyers</p>
+                            <p>Sell directly to genuine buyers</p>
+                            <a class="btn btn-outline-primary theme-button" href="/listing"
+                            >List Your Car Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 Services-tab item">
+                    <div class="folded-corner service_tab_1">
+                        <div class="text"> <i class="fa fa-user fa-5x fa-icon-image"></i>
+                            <p style="padding: 10px;"  class="item-title">
+                                <h3>Contact Us</h3>
+                            </p>
+                            <p>Chat with our customer service</p>
+                            <p>Get detailed information</p>
+                            <p>Request a call</p>
+                            <a class="btn btn-outline-primary theme-button" href="/contactus"
+                            >Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block javascript %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+
+{% endblock %}

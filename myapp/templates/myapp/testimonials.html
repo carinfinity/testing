@@ -1,0 +1,200 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block css%}
+
+
+   <style>
+       @keyframes text {
+    from {
+        width: 0%;
+        font-size: 0vw
+    }
+
+    to {
+        width: 45vw;
+        font-size: 1.2vw
+    }
+}
+
+@keyframes photo {
+    from {
+        transform: rotateY(180deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+@keyframes background {
+    from {
+        background-color: black
+    }
+
+    to {
+        background-color: #29b6f6
+    }
+}
+
+.by {
+    font-family: 'Dancing Script', cursive
+}
+
+@media only screen and (max-width: 425px) {
+    .main {
+        width: 100vw;
+
+        height: auto
+    }
+
+    img {
+        height: 30vw;
+        width: 30vw;
+
+    }
+
+    .test1 {
+        height: 45vw;
+        
+        font-size: 3.6vw
+    }
+}
+.card {
+     border-radius: 12px;
+     width: calc(500px + 10 * ((100vw - 320px) / 680));
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8)
+ }
+
+ .card-header {
+     border-radius: 12px !important
+ }
+
+ .modal-body .btn-danger {
+     border-radius: 11px;
+     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2)
+ }
+
+
+
+ @media (max-width: 526px) {
+     .card {
+         width: unset
+     }
+ }
+
+ span {
+     font-size: 30px !important
+ }
+
+ .modal-content {
+     background: transparent !important
+ }
+    .custom-margin {
+        margin-top: 5vh;
+    }
+
+    /* If you add background image it will look like transparent form*/
+
+</style>
+        {% endblock %}
+        {% block content %}
+        <section class="section section-bg" id="call-to-action" style="background-image:  linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="cta-content" style="text-align: center;">
+                            <br>
+                            <br>
+                            <h2  style="color: #ffffff;">Read our <em style="color: #09ffa9;">Testimonials</em></h2>
+                            <p style="color: #ffffff;">Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+     
+            
+       
+     
+
+          <section class="w3l-testimonials" id="testimonials">
+            <div class="testimonials py-5">
+             {% if user.is_authenticated %}
+              {% for i in review %}
+          <section class="w3l-index3 py-5">
+            <div class="" style="max-width: 900px;">
+              <div class="row align-items-center" style="background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));">
+                <div class="col-lg-6 book-info pr-lg-5">
+                  <h3 class="mb-md-4 mb-3">{{i.userfirstname}} {{i.userlastname}}</h3>
+                  <p class="mb-md-5 mb-4">{{i.review}}</p>
+                    <div class="container d-flex justify-content-center"> <button type="submit" class="btn btn-outline-primary"  data-toggle="modal" data-target="#{{i.userfirstname}}">See Details</button>
+                      <div id="{{i.userfirstname}}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content border-0">
+                                  <div class="modal-body p-0">
+                                      <div class="card border-0 p-sm-3 p-2 justify-content-center">
+                                          <div class="card-header pb-0 bg-white border-0 ">
+                                              <div class="row">
+                                                  <div class="col ml-auto"><button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>
+                                              </div>
+                                              <p class="font-weight-bold mb-2" style="color: blue;"> Users Detail</p>
+                                              <p class="text-muted "> <b>Mobile No :</b> {{i.usermobile}} </p>
+                                              <p class="text-muted "> <b>Email :</b> {{i.useremail}}</p>
+                                          </div>
+                                          <div class="card-body px-sm-4 mb-2 pt-1 pb-0">
+                                              <div class="row justify-content-end no-gutters">
+                                                  <div class="col-auto"><button type="button" class="btn btn-light text-muted" data-dismiss="modal">Cancel</button></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-lg-6 pl-lg-5 mt-lg-0 mt-5">
+                <img style="     width: 250px;
+                height: 250px;
+                margin-left: 48px;"  src="/media/{{i.imagefront}}" class="img-fluid shadow img-curve" alt="" />
+              </div>
+            </div>
+          </section>     
+          {% endfor %} 
+
+          {% else %}
+          
+          {% for i in review %}
+          <section class="w3l-index3 py-5">
+            <div class="container py-lg-3 mt-3" style="max-width: 900px;">
+              <div class="row align-items-center" style=" background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197)); border-radius: 50px;     border-bottom-right-radius: 160px;
+              border-top-right-radius: 160px;">
+                <div class="col-lg-6 book-info pr-lg-5">
+                  <h3 class="mb-md-4 mb-3">{{i.userfirstname}} {{i.userlastname}}</h3>
+                  <span><img class="img-fluid quotes" src="https://i.imgur.com/U20aFIt.png" width="20" height="20"></span><p>{{i.review}}</p><span><img class="img-fluid quotes-down" src="https://i.imgur.com/DPzmyiD.png" width="20" height="20"></span>
+                  <div class="container d-flex justify-content-center"> <a href="/login" class="btn btn-outline-primary">Login to see details</a>
+                </div>
+              </div>
+              <div class="col-lg-6 pl-lg-5 mt-lg-0 mt-5">
+                <img style=" 
+                border-radius: 160px;
+                width: 250px;
+                height: 250px;
+                margin-left: 142px;"  src="/media/{{i.imagefront}}" class="img-fluid shadow img-curve" alt="" />
+              </div>
+            </div>
+          </section>     
+          {% endfor %} 
+          {% endif %}
+        </div>
+      </section> 
+        
+
+{% endblock %}
+{% block javascript %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+
+{% endblock %}

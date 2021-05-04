@@ -1,0 +1,149 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block css%}
+
+
+   <style>
+    .custom-margin {
+        margin-top: 5vh;
+    }
+
+    /* If you add background image it will look like transparent form*/
+    body {
+
+        background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+        {% endblock %}
+
+
+
+        {% block content %}
+                <!-- ***** Preloader Start ***** -->
+                <div id="js-preloader" class="js-preloader">
+                    <div class="preloader-inner">
+                      <span class="dot"></span>
+                      <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Preloader End ***** -->
+              <!--header-->
+
+{% if ans %}
+<div class="container-fluid">
+    <div class="row justify-content-center custom-margin">
+        <div class="col-sm-6 col-md-4">
+            <!-- Add bg-primary in form tag if want form background color-->
+            <!--text-white if want text color white-->
+            <form action="/predict" class="shadow-lg p-4 text-black" style="border: solid 5px #51d19c;
+            border-radius: 34px; background: #0a70b7;">
+            {% for i in ans %}
+              
+            
+            <h5 style="color: white;">Best price for your car is: <b>{{ i }} Lakhs </b></h5>
+            {% endfor %}
+            <br>
+            <a href=""type="submit" class="btn btn-outline-primary theme-button">Check Again</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+
+{% else %}
+<div class="container-fluid">
+    <div class="row justify-content-center custom-margin">
+        <div class="col-sm-6 col-md-4">
+            <!-- Add bg-primary in form tag if want form background color-->
+            <!--text-white if want text color white-->
+            <form name="form1" action=" " class="shadow-lg p-4 text-black" method="POST" style="border: solid 5px #51d19c;
+            border-radius: 34px; background: #0a70b7;">
+                {% csrf_token %}
+                 
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-rupee-sign"></i><label for="username" class="pl-2 font-weight-bold">Present Showroom Price? (In Lakhs)</label>
+                    <div class="form-contral">
+                        <input type="number" class="form-control" name = "present_price" required>
+                    </div>
+                </div>
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-user"></i><label for="username" class="pl-2 font-weight-bold">How much km driven?</label>
+                    <div class="form-contral">
+                        <input type="number" class="form-control" name = "kms_driven" required>
+                    </div>
+                </div>
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-user"></i><label for="email" class="pl-2 font-weight-bold">Age of a car?</label>
+                    <div class="form-contral">
+                        <input type="number" class="form-control" name = "year" required>
+                    </div>
+                </div>
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-phone"></i><label for="username" class="pl-2 font-weight-bold">Type of Buy?</label>
+                    <div class="form-contral">
+                        <input type="radio" id="New" name="owner" value="0"required>
+                        <label for="New">New</label><br>
+                        <input type="radio" id="Second" name="owner" value="1"required>
+                        <label for="Second">Second Hand</label><br>
+                        <input type="radio" id="Third" name="owner" value="2"required>
+                        <label for="Third">Third Hand</label>
+                    </div> 
+                </div>
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-key"></i><label for="pass" class="pl-2 font-weight-bold">Fuel type?</label>
+                    <div class="form-contral">
+                        <input type="radio" id="Petrol" name="fuel" value="0"required>
+                        <label for="Petrol">Petrol</label><br>
+                        <input type="radio" id="Diesel" name="fuel" value="1"required>
+                        <label for="Diesel">Diesel</label><br>
+                    </div>
+                </div>
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-key"></i><label for="pass" class="pl-2 font-weight-bold">Seller Type?</label>
+                    <div class="form-contral">
+                        <input type="radio" id="Indivisual" name="seller" value="0"required>
+                        <label for="Indivisual">Indivisual</label><br>
+                        <input type="radio" id="Dealer" name="seller" value="1"required>
+                        <label for="Dealer">Dealer</label><br>
+                    </div>
+                </div>
+                <div class="form-group" style="color: #ffffff;">
+                    <i class="fas fa-key"></i><label for="pass" class="pl-2 font-weight-bold">Transmission Type?</label>
+                    <div class="form-contral">
+                        <input type="radio" id="Manual" name="transmission" value="0"required>
+                        <label for="Manual">Manual</label><br>
+                        <input type="radio" id="Automatic" name="transmission" value="1"required>
+                        <label for="Automatic">Automatic</label><br>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-primary theme-button">
+                    Check Price
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+    
+
+{% endif %}
+{% endblock %}
+
+
+{% block javascript %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+
+{% endblock %}

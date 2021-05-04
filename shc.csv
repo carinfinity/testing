@@ -1,0 +1,201 @@
+Car_Name,Year,Selling_Price,Present_Price,Kms_Driven,Fuel_Type,Seller_Type,Transmission,Owner
+ritz,2014,2.32,4.51,27000,Petrol,Indivisual,Manual,1
+sx4,2013,4.75,7.47,43000,Diesel,Indivisual,Manual,0
+ciaz,2017,2.2,8.31,6900,Petrol,Indivisual,Manual,2
+wagon r,2011,1.9,3.8,5200,Petrol,Indivisual,Manual,0
+swift,2014,3.47,6.87,42450,Diesel,Indivisual,Manual,1
+vitara brezza,2018,6.25,10.32,2071,Diesel,Indivisual,Manual,0
+ciaz,2015,4.75,7.23,18796,Petrol,Indivisual,Manual,0
+s cross,2015,3.05,9.55,33429,Diesel,Indivisual,Manual,2
+ciaz,2016,4.25,7.89,20273,Diesel,Indivisual,Manual,1
+ciaz,2015,3.83,7.23,42367,Diesel,Indivisual,Manual,0
+alto 800,2017,1.28,4.48,2135,Petrol,Indivisual,Manual,2
+ciaz,2015,4.15,7.23,51000,Diesel,Indivisual,Manual,0
+ciaz,2015,4.57,7.23,15000,Petrol,Indivisual,Automatic,1
+ertiga,2015,3.18,6.76,26000,Petrol,Indivisual,Manual,0
+dzire,2009,2.9,6.11,77427,Petrol,Indivisual,Manual,0
+ertiga,2016,4.75,8.51,43000,Diesel,Indivisual,Manual,1
+ertiga,2015,3.25,6.76,41678,Diesel,Indivisual,Manual,1
+ertiga,2016,4.59,8.51,43000,Diesel,Indivisual,Manual,0
+wagon r,2015,1.25,4.57,35500,Petrol,Indivisual,Manual,2
+sx4,2010,3.65,7.98,41442,Petrol,Indivisual,Manual,0
+alto k10,2016,1.85,3.95,25000,Petrol,Indivisual,Manual,1
+ignis,2017,2.94,5.71,2400,Petrol,Indivisual,Manual,0
+sx4,2011,3.04,8.01,50000,Petrol,Indivisual,Automatic,2
+alto k10,2014,1.47,3.46,45280,Petrol,Indivisual,Manual,1
+wagon r,2013,2.09,4.57,56879,Petrol,Indivisual,Manual,0
+swift,2011,2.76,5.2,20000,Petrol,Indivisual,Manual,0
+swift,2013,3.15,5.53,55138,Petrol,Indivisual,Manual,1
+swift,2017,3.58,7.11,16200,Petrol,Individual,Manual,0
+alto k10,2010,1.95,3.28,44542,Petrol,Indivisual,Manual,1
+ciaz,2015,4.45,7.23,45000,Diesel,Indivisual,Manual,0
+ritz,2012,2.19,4.59,51439,Diesel,Indivisual,Manual,0
+ritz,2011,1.35,5.18,54200,Petrol,Indivisual,Manual,2
+swift,2014,3.48,5.2,39000,Diesel,Indivisual,Manual,0
+ertiga,2014,3.68,8.05,45000,Diesel,Indivisual,Manual,1
+dzire,2014,4.15,6.11,45000,Diesel,Indivisual,Manual,0
+sx4,2011,2.95,8.28,49998,Petrol,Indivisual,Manual,2
+dzire,2015,3.37,5.44,48767,Petrol,Indivisual,Manual,0
+800,2003,0.95,2.4,127000,Petrol,Individual,Manual,1
+alto k10,2016,1.67,4.05,10079,Petrol,Indivisual,Manual,1
+sx4,2003,4.25,7.98,62000,Petrol,Indivisual,Manual,0
+baleno,2016,3.85,8.11,24524,Petrol,Indivisual,Automatic,1
+alto k10,2014,1.55,3.28,46706,Petrol,Indivisual,Manual,0
+sx4,2008,2.95,8.14,58000,Petrol,Indivisual,Manual,1
+dzire,2014,1.52,6.11,45780,Diesel,Indivisual,Manual,2
+omni,2012,0.75,2.4,50000,Petrol,Indivisual,Manual,2
+ciaz,2014,5.53,9.72,15000,Petrol,Indivisual,Automatic,0
+ritz,2013,1.65,3.1,64532,Petrol,Indivisual,Manual,1
+wagon r,2006,1.74,3.8,65000,Petrol,Indivisual,Manual,0
+ertiga,2015,4.78,10.47,25870,Petrol,Indivisual,Manual,1
+ciaz,2017,3.75,8.04,37000,Petrol,Indivisual,Automatic,0
+fortuner,2012,14.9,30.61,104707,Diesel,Indivisual,Automatic,1
+fortuner,2015,23,30.61,40000,Diesel,Indivisual,Automatic,0
+innova,2017,18,19.77,15000,Diesel,Indivisual,Automatic,0
+fortuner,2013,16,30.61,135000,Diesel,Individual,Automatic,0
+innova,2005,2.75,10.21,90000,Petrol,Individual,Manual,1
+corolla altis,2009,3.6,15.04,70000,Petrol,Indivisual,Automatic,2
+etios cross,2015,4.5,7.27,40534,Petrol,Indivisual,Manual,0
+corolla altis,2010,4.75,18.54,50000,Petrol,Indivisual,Manual,0
+etios g,2014,4.1,6.8,39485,Petrol,Indivisual,Manual,1
+fortuner,2014,19.99,35.96,41000,Diesel,Indivisual,Automatic,2
+corolla altis,2013,2.56,18.61,40001,Petrol,Indivisual,Manual,2
+etios cross,2015,4.5,7.7,40588,Petrol,Indivisual,Manual,0
+fortuner,2014,17,35.96,78000,Diesel,Indivisual,Automatic,1
+fortuner,2015,17.45,35.96,47000,Diesel,Indivisual,Automatic,2
+fortuner,2017,33,36.23,6000,Diesel,Indivisual,Automatic,0
+etios liva,2014,3.15,6.95,45000,Diesel,Indivisual,Manual,1
+innova,2017,11.46,23.15,11000,Petrol,Indivisual,Automatic,2
+fortuner,2010,9.25,20.45,59000,Diesel,Indivisual,Manual,0
+corolla altis,2011,4.35,13.74,88000,Petrol,Indivisual,Manual,1
+corolla altis,2016,14.25,20.91,12000,Petrol,Indivisual,Manual,0
+etios liva,2014,3.95,6.76,71000,Diesel,Indivisual,Manual,0
+corolla altis,2011,4.5,12.48,45000,Diesel,Indivisual,Manual,1
+corolla altis,2013,7.45,18.61,56001,Petrol,Indivisual,Manual,0
+etios liva,2011,2.65,5.71,43000,Petrol,Indivisual,Manual,1
+etios cross,2014,4.9,8.93,83000,Diesel,Indivisual,Manual,0
+etios g,2015,1.67,6.8,36000,Petrol,Indivisual,Manual,1
+corolla altis,2013,5.5,14.68,72000,Petrol,Indivisual,Manual,0
+corolla,2004,1.5,12.35,135154,Petrol,Indivisual,Automatic,0
+corolla altis,2010,5.25,22.83,80000,Petrol,Indivisual,Automatic,0
+fortuner,2012,14.5,30.61,89000,Diesel,Indivisual,Automatic,1
+corolla altis,2016,14.73,14.89,23000,Diesel,Indivisual,Manual,0
+etios gd,2015,4.75,7.85,40000,Diesel,Indivisual,Manual,0
+innova,2017,23,25.39,15000,Diesel,Indivisual,Automatic,0
+innova,2015,12.5,13.46,38000,Diesel,Indivisual,Manual,1
+innova,2005,3.49,13.46,197176,Diesel,Indivisual,Manual,0
+camry,2006,7.54,23.73,142000,Petrol,Individual,Automatic,2
+land cruiser,2010,35,92.6,78000,Diesel,Indivisual,Manual,0
+corolla altis,2012,5.9,13.74,56000,Petrol,Indivisual,Manual,0
+etios liva,2013,3.45,6.05,47000,Petrol,Indivisual,Manual,0
+etios g,2014,4.75,6.76,40000,Petrol,Indivisual,Manual,0
+corolla altis,2009,3.8,18.61,62000,Petrol,Indivisual,Manual,0
+innova,2014,6.78,16.09,58242,Diesel,Indivisual,Manual,2
+innova,2005,3.51,13.7,75000,Petrol,Indivisual,Manual,0
+fortuner,2015,23,30.61,40000,Diesel,Indivisual,Automatic,1
+corolla altis,2008,4,22.78,89000,Petrol,Indivisual,Automatic,0
+corolla altis,2012,5.85,18.61,72000,Petrol,Indivisual,Manual,2
+innova,2016,20.75,25.39,29000,Diesel,Indivisual,Automatic,0
+corolla altis,2017,17,18.64,8700,Petrol,Indivisual,Manual,0
+corolla altis,2013,7.05,18.61,45000,Petrol,Indivisual,Manual,1
+fortuner,2010,9.65,20.45,50024,Diesel,Indivisual,Manual,0
+i20,2010,2.43,6.79,58000,Diesel,Indivisual,Manual,2
+grand i10,2015,4.4,5.7,28200,Petrol,Indivisual,Manual,1
+i10,2011,2.95,4.6,53460,Petrol,Indivisual,Manual,0
+eon,2015,2.75,4.43,28282,Petrol,Indivisual,Manual,0
+grand i10,2016,5.25,5.7,3493,Petrol,Indivisual,Manual,1
+xcent,2017,5.75,7.13,12479,Petrol,Indivisual,Manual,0
+grand i10,2015,2.14,5.7,34797,Petrol,Indivisual,Automatic,2
+i20,2017,7.9,8.1,3435,Petrol,Indivisual,Manual,0
+grand i10,2015,4.85,5.7,21125,Diesel,Indivisual,Manual,1
+i10,2012,3.1,4.6,35775,Petrol,Indivisual,Manual,0
+elantra,2015,11.75,14.79,43535,Diesel,Indivisual,Manual,0
+creta,2016,11.25,13.6,22671,Petrol,Indivisual,Manual,1
+i20,2011,2.9,6.79,31604,Petrol,Indivisual,Manual,1
+grand i10,2017,5.25,5.7,20114,Petrol,Indivisual,Manual,0
+verna,2012,4.5,9.4,36100,Petrol,Indivisual,Manual,0
+eon,2016,1.1,4.43,12500,Petrol,Indivisual,Manual,2
+eon,2016,1.9,4.43,15000,Petrol,Indivisual,Manual,2
+verna,2014,6.45,9.4,45078,Petrol,Indivisual,Manual,0
+verna,2012,4.5,9.4,36000,Petrol,Indivisual,Manual,1
+eon,2017,3.5,4.43,38488,Petrol,Indivisual,Manual,0
+i20,2013,4.5,6.79,32000,Petrol,Indivisual,Automatic,0
+i20,2014,2.67,7.6,77632,Diesel,Indivisual,Manual,2
+verna,2015,8.25,9.4,61381,Diesel,Indivisual,Manual,0
+verna,2013,5.11,9.4,36198,Petrol,Indivisual,Automatic,1
+i10,2011,2.7,4.6,22517,Petrol,Indivisual,Manual,0
+grand i10,2015,5.25,5.7,24678,Petrol,Indivisual,Manual,0
+i10,2011,2.55,4.43,57000,Petrol,Indivisual,Manual,1
+verna,2012,4.95,9.4,60000,Diesel,Indivisual,Manual,0
+i20,2012,3.1,6.79,52132,Diesel,Indivisual,Manual,0
+verna,2013,6.15,9.4,45000,Diesel,Indivisual,Manual,1
+verna,2017,9.25,9.4,15001,Petrol,Indivisual,Manual,0
+elantra,2015,11.45,14.79,12900,Petrol,Indivisual,Automatic,0
+grand i10,2013,3.9,5.7,53000,Diesel,Indivisual,Manual,0
+grand i10,2015,5.5,5.7,4492,Petrol,Indivisual,Manual,0
+verna,2017,9.1,9.4,15141,Petrol,Indivisual,Manual,0
+eon,2016,0.98,4.43,11849,Petrol,Indivisual,Manual,2
+creta,2015,11.25,13.6,68000,Diesel,Indivisual,Manual,0
+verna,2013,4.8,9.4,60241,Petrol,Indivisual,Manual,2
+eon,2012,2,4.43,23709,Petrol,Indivisual,Manual,0
+verna,2012,5.35,9.4,32322,Diesel,Indivisual,Manual,0
+xcent,2015,4.75,7.13,35866,Petrol,Indivisual,Manual,1
+xcent,2014,4.4,7.13,34000,Petrol,Indivisual,Manual,0
+i20,2016,6.25,7.6,7000,Petrol,Indivisual,Manual,0
+verna,2013,5.95,9.4,49000,Diesel,Indivisual,Manual,1
+verna,2012,5.2,9.4,71000,Diesel,Indivisual,Manual,0
+i20,2012,3.75,6.79,35000,Petrol,Indivisual,Manual,0
+verna,2015,5.95,9.4,36000,Petrol,Indivisual,Manual,0
+i10,2013,4,4.6,30000,Petrol,Indivisual,Manual,0
+i20,2016,1.87,8.2,17000,Petrol,Indivisual,Manual,1
+creta,2016,4.98,20.1,35934,Diesel,Indivisual,Manual,2
+city,2013,5,9.9,56701,Petrol,Indivisual,Manual,0
+brio,2015,5.4,6.82,31427,Petrol,Indivisual,Automatic,0
+city,2014,4.5,9.9,48000,Diesel,Indivisual,Manual,2
+city,2013,5.25,9.9,54242,Petrol,Indivisual,Manual,0
+brio,2012,3,5.35,53675,Petrol,Indivisual,Manual,1
+city,2016,6.7,13.6,49562,Petrol,Indivisual,Manual,2
+city,2015,6.1,12.2,40324,Petrol,Indivisual,Manual,0
+city,2015,5.8,12.1,25000,Petrol,Indivisual,Manual,1
+amaze,2014,3.1,7,36054,Petrol,Indivisual,Manual,2
+city,2016,8.15,13.6,29223,Petrol,Indivisual,Manual,0
+brio,2016,4.1,5.97,5600,Petrol,Indivisual,Manual,1
+amaze,2015,3.25,5.8,40023,Petrol,Indivisual,Manual,2
+jazz,2016,6.1,7.7,16002,Petrol,Indivisual,Manual,0
+amaze,2015,4.8,7,40026,Petrol,Indivisual,Manual,1
+jazz,2017,6.5,8.7,21200,Petrol,Indivisual,Manual,2
+amaze,2014,5.65,7,35000,Petrol,Indivisual,Manual,0
+city,2016,6.2,9.4,19434,Diesel,Indivisual,Manual,1
+brio,2017,3.8,5.8,19000,Petrol,Indivisual,Manual,2
+city,2015,7.65,10.3,18828,Petrol,Indivisual,Manual,0
+city,2011,4.1,10.1,69341,Petrol,Indivisual,Manual,1
+city,2009,3.5,10,69562,Petrol,Indivisual,Manual,2
+city,2015,7.5,10,27600,Petrol,Indivisual,Manual,0
+jazz,2010,3.35,7.5,61203,Petrol,Indivisual,Manual,1
+brio,2014,4.65,6.8,16500,Petrol,Indivisual,Manual,2
+city,2016,9.1,13.6,30753,Petrol,Indivisual,Automatic,1
+city,2015,8.2,13.2,24800,Petrol,Indivisual,Manual,0
+city,2015,7.9,13.2,21780,Petrol,Indivisual,Manual,2
+jazz,2016,6,8.4,4000,Petrol,Indivisual,Manual,1
+city,2014,6.25,12.15,40126,Petrol,Indivisual,Manual,2
+brio,2015,4.25,5.9,14465,Petrol,Indivisual,Manual,0
+city,2006,2.75,7.6,50456,Petrol,Indivisual,Manual,1
+city,2014,6.25,14,63000,Diesel,Indivisual,Manual,2
+city,2016,8.99,11.8,9010,Petrol,Indivisual,Manual,1
+brio,2013,3.5,5.9,9800,Petrol,Indivisual,Manual,0
+jazz,2016,6.6,8.5,15059,Petrol,Indivisual,Automatic,2
+jazz,2016,6.1,7.9,28569,Petrol,Indivisual,Manual,1
+amaze,2015,5.75,7.5,44000,Petrol,Indivisual,Automatic,0
+city,2015,7.43,13.6,34000,Petrol,Indivisual,Manual,2
+city,2016,8.85,12.2,10980,Petrol,Indivisual,Manual,1
+amaze,2014,3.4,6.4,19000,Petrol,Indivisual,Manual,2
+brio,2015,5.4,6.1,31427,Petrol,Indivisual,Manual,0
+jazz,2016,6.4,8.4,12000,Petrol,Indivisual,Manual,1
+city,2010,3.25,7.6,38000,Petrol,Indivisual,Manual,2
+amaze,2014,4.1,6.8,33019,Petrol,Indivisual,Manual,1
+city,2015,9.55,12.2,60076,Diesel,Indivisual,Manual,0
+city,2016,7.65,11.6,33988,Diesel,Indivisual,Manual,2
+brio,2015,4.26,5.9,60000,Petrol,Indivisual,Manual,1
+city,2009,4.5,11,87934,Petrol,Indivisual,Manual,0
+city,2017,8.1,12.5,9000,Diesel,Indivisual,Manual,2
+brio,2016,4.9,5.9,5464,Petrol,Indivisual,Manual,1

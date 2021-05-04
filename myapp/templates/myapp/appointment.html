@@ -1,0 +1,186 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block css%}
+
+
+   <style>
+    .custom-margin {
+        margin-top: 5vh;
+    }
+
+    /* If you add background image it will look like transparent form*/
+    body {
+
+      background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+        {% endblock %}
+
+
+{% block content %}
+        <!-- ***** Preloader Start ***** -->
+        <div id="js-preloader" class="js-preloader">
+          <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Preloader End ***** -->
+    <!--header-->
+    <div><img src="{% static "myapp/assets/images/sellcar.png" %}" class="img-fluid" alt="Responsive image"></div>
+
+<div class="container-fluid">
+    <div class="row justify-content-center custom-margin">
+        <div class="col-sm-6 col-md-4">
+            <!-- Add bg-primary in form tag if want form background color-->
+            <!--text-white if want text color white-->
+            
+            <form action="#" class="shadow-lg p-4 text-black" method="POST" enctype="multipart/form-data" style="border: solid 5px #51d19c;
+            border-radius: 34px; background: #0a70b7;">
+                {% csrf_token %}
+                <div class="form-group">
+                    <span><H5 style="color: #ffffff;"><b>Enter A Date Book An appointmnet</b></H5></span>
+                    <hr>
+                    <i class="far fa-calendar-alt" style="color: #ffffff;"></i><label style="color: #ffffff;" for="appointmnet" class="pl-2 font-weight-bold">DATE</label>
+                    
+                     <input type="date" name="datess" id="datefield" class="form-control" max="2021-12-12", min="2021-01-01">
+                    
+                </div>
+                
+                
+                <button type="submit" id="clickme" class="btn btn-outline-primary theme-button" name="check">
+                    Check
+                </button>{% if j == 1 %}
+                <span style="color: #ffffff;"><b> Date Selected : {{dates}}</b></span>
+                    
+                {% endif %}
+              </form>
+                <form action="#" class="shadow-lg p-4 text-black" method="POST" enctype="multipart/form-data" style="border: solid 5px #51d19c;
+                border-radius: 34px; background: #0a70b7;"> 
+                  {% csrf_token %}
+                {% if j == 1 %}
+                    
+            
+                    
+                <span style="color: #ffffff;">{% if len < 1 %}
+                    <br><B>*Appointment Available!</B>
+                    <hr>
+                    <div class="form-group">
+                        <span><H5><b>Choose A Time To Book An appointmnet</b></H5></span>
+                        <br>
+                        <div class="form-group" style="color: #ffffff;">
+                          <i class="fas fa-phone"></i><label for="time-selection" class="pl-2 font-weight-bold">Type of Buy?</label>
+                          <div class="form-contral">
+                              <input type="radio" id="New" name="owner" value="9am-11am"required>
+                              <label for="New">9 Am - 11 Am</label><br>
+                              <input type="radio" id="Second" name="owner" value="11am-1pm"required>
+                              <label for="Second">11 Am - 1 Pm</label><br>
+                              <input type="radio" id="Third" name="owner" value="3pm-5pm"required>
+                              <label for="Third">3 Pm - 5 Pm</label>
+                          </div> 
+                      </div>
+                    <div class="form-group">
+                        <i class="fas fa-mobile-alt"></i><label for="email" class="pl-2 font-weight-bold">Mobile No.</label>
+                        <div class="form-contral"><input maxlength="11" minlength="10" type="number" class="form-control" name="carusermobile" id="" required></div>
+                        <!--Add text-white below if want text color white-->
+                        
+                      </div>
+                      <div class="form-group">
+                        <i class="fas fa-map-marker-alt"></i><label for="pass" class="pl-2 font-weight-bold">Address</label>
+                        <div class="form-contral"><input type="text" class="form-control" name="caruseraddress" id="" required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="fas fa-car"></i><label for="pass" class="pl-2 font-weight-bold">Car Make</label>
+                        <div class="form-contral"><input class="form-control" type="text" name="carname1" id="" required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="fas fa-car"></i><label for="pass" class="pl-2 font-weight-bold">Model</label>
+                        <div class="form-contral"><input class="form-control" type="text" name="carmodel" id=""required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="fas fa-car"></i><label for="pass" class="pl-2 font-weight-bold">Car Number</label>
+                        <div class="form-contral"><input type="text" class="form-control" name="carnumber" id=""required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="far fa-calendar-alt"></i><label for="pass" class="pl-2 font-weight-bold">Car Launch year</label>
+                        <div class="form-contral"><input maxlength="4" type="number" class="form-control" name="carlaunchdate" id=""required></div>
+                      </div>
+                     
+                      <div class="form-group">
+                        <i class="far fa-image"></i><label for="pass" class="pl-2 font-weight-bold">Image(front)</label>
+                        <div class="form-contral"><input type="file" class="form-control" name="carimagefront" id=""required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="far fa-image"></i><label for="pass" class="pl-2 font-weight-bold">Image(Right)</label>
+                        <div class="form-contral"><input type="file" class="form-control" name="carimageright" id=""required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="far fa-image"></i><label for="pass" class="pl-2 font-weight-bold">Image(Left)</label>
+                        <div class="form-contral"><input type="file" class="form-control" name="carimageleft" id=""required></div>
+                      </div>
+                      <div class="form-group">
+                        <i class="far fa-image"></i><label for="pass" class="pl-2 font-weight-bold">Image(Rear)</label>
+                        <div class="form-contral"><input type="file" class="form-control" name="carimageback" id=""required></div>
+                      </div>
+                      <button type="submit" class="btn btn-outline-primary theme-button" name="submit">
+                        Check
+                    </button>
+                    
+                  {% else %}
+                  <div>
+                  <b>OOPS! Appointments Are Full! Please Check Other Dates.</b> </div>
+                  {% endif %}</div></span>
+                  {% else %}
+                  <div></div>
+                  {% endif %}
+            </form>
+        </div>
+    </div>
+
+<br>
+
+{% endblock %}
+
+
+{% block javascript %}
+<script>
+    var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var mn = today.getMonth()+2; //January is 0!
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+        mn='0'+mn
+    }   
+today = yyyy+'-'+mm+'-'+dd;
+today1 = yyyy+'-'+mn+'-'+dd;
+document.getElementById("datefield").setAttribute("min", today);
+document.getElementById("datefield").setAttribute("max", today1);
+</script>
+
+<!-- <script>
+    
+    $(document).ready(function() {
+    $('#clickme').click(function() {
+        $('#hideme').toggle();
+    });
+});
+</script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends 'myapp/base.html' %} {% load static %}
+{% block css%}
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+  rel="stylesheet" />
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/assets/css/font-awesome.css' %}" />
+
+<link rel="stylesheet" href="{% static 'myapp/assets/css/mystyle.css' %}" />
+<style>
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+</style>
+{% endblock %}
+{% block content %}
+        <!-- ***** Preloader Start ***** -->
+        <div id="js-preloader" class="js-preloader">
+          <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Preloader End ***** -->
+    <!--header-->
+<!-- ***** Fleet Starts ***** -->
+<section class="section" id="trainers">
+  <div class="container">
+    <br>
+    <br>
+    <div class="contact-form">
+      <form action="#" id="contact">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label>Used/New:</label>
+
+              <select>
+                <option value="">All</option>
+                <option value="new">New vehicle</option>
+                <option value="used">Used vehicle</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label>Vehicle Type:</label>
+
+              <select>
+                <option value="">--All --</option>
+                <option value="">--All --</option>
+                <option value="">--All --</option>
+                <option value="">--All --</option>
+                <option value="">--All --</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label>Make:</label>
+
+              <select>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label>Model:</label>
+
+              <select>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+                <option value="">-- All --</option>
+              </select>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <div class="col-sm-4 offset-sm-4 my">
+          <div class="main-button text-center"></div>
+          <a class="btn btn-outline-primary theme-button" href="#">Search</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    </form>
+  </div>
+
+  <div class="row">
+    {% for i in obj %}
+      
+    
+    <div class="col-lg-4">
+      <div class="trainer-item">
+        <div class="image-thumb">
+          <img src="/media/{{i.carimagefront}}" alt="">
+          
+        </div>
+        <div class="down-content">
+          <span>
+            <H5 style="color: white;">
+              Rs &nbsp; {{i.carprice}}
+            </H5>
+          </span>
+
+          <div class="desc">{{i.cardesc}}</div>
+
+          <p>
+            <i class="fa fa-dashboard"></i> {{i.carlaunchdate}} &nbsp;&nbsp;&nbsp;
+            <i class="fa fa-cube"></i> {{i.carcc}} cc &nbsp;&nbsp;&nbsp;
+            <i class="fa fa-cog"></i> {{i.cartransmissiontype}} &nbsp;&nbsp;&nbsp;
+          </p>
+
+          <ul class="">
+            <li><a class="btn btn-outline-primary theme-button" href="/usedcardetail/{{i.id}}">View Car</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+
+  {% endblock %}
+  {% block javascript %}
+  <!-- jQuery -->
+  <script src="{% static 'myapp/assets/js/jquery-2.1.0.min.js' %}"></script>
+
+  <!-- Bootstrap -->
+  <script src="{% static 'myapp/assets/js/popper.js' %}"></script>
+
+
+  <!-- Plugins -->
+  <script src="{% static 'myapp/assets/js/scrollreveal.min.js' %}"></script>
+  <script src="{% static 'myapp/assets/js/waypoints.min.js' %}"></script>
+  <script src="{% static 'myapp/assets/js/jquery.counterup.min.js' %}"></script>
+  <script src="{% static 'myapp/assets/js/imgfix.min.js' %}"></script>
+  <script src="{% static 'myapp/assets/js/mixitup.js' %}"></script>
+  <script src="{% static 'myapp/assets/js/accordions.js' %}"></script>
+
+  <!-- Global Init -->
+  <script src="{% static 'myapp/assets/js/custom.js' %}"></script>
+  {% endblock %}

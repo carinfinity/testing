@@ -1,0 +1,478 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <title>Car Infinity</title>
+
+    <!-- Template CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'myapp/assets/css/style-starter.css' %}"
+    />
+
+    <!-- web fonts -->
+    <link
+      href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'myapp/assets/css/style.css' %}"
+    />
+    <!-- light-slider.css------------->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'myapp/assets/css/lightslider.css' %}"
+    />
+    <!--Jquery-------------------->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--lightslider.js--------------->
+    <script
+      type="text/javascript"
+      src="{% static 'myapp/assets/js/lightslider.js' %}"
+    ></script>
+    <style>
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
+      .navbar-custom {
+        background-color: rgb(219, 207, 238);
+        background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));
+      }
+    </style>
+    {% block css %} {% endblock %}
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+      <!-- <a class="navbar-brand" style="color: white" href="#">CAR INFINITY</a> -->
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'myapp/assets/images/bb.png' %}" alt="Your logo" title="Your logo" style="height: 100px;
+        margin-top: -25px;
+        margin-left: 15px;" " />
+    </a>
+    <span style="margin-top: 40px;
+    margin-left: -87px;
+    color: white;" >Car Infinity</span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link py-4" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="/buycar">Buy Car</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="/sellcar">Sell Car</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle py-4"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/aboutus">About Us</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/testimonials">Testimonial</a>
+              <a class="dropdown-item" href="/predict">Car Valuation</a>
+              <a class="dropdown-item" href="/contactus">Contact Us</a>
+            </div>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item dropdown py-2">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/listing">My Listings</a>
+              <a class="dropdown-item" href="/appointment">Appointments</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="nav-item ml-lg-3 ml-0 mt-lg-0 mt-3 py-2">
+            <a class="btn btn-outline-primary theme-button" href="/login"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item ml-lg-3 ml-0 mt-lg-0 mt-3 py-2">
+            <a class="btn btn-outline-primary theme-button" href="/signup"
+              >SignUp</a
+            >
+          </li>
+          {% endif %}
+          <form method="GET" action="/search" class="form-inline my-2 my-lg-0">
+            <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            name="query"
+            id="query"
+          />
+            <button class="btn btn-outline-primary theme-button" type="submit">
+              Search
+            </button>
+          </form>
+        </ul>
+      </div>
+    </nav>
+    <!--/header-->
+    {% block content %} {% endblock %}
+    <footer>
+      <!-- footer -->
+      <section class="w3l-footer">
+        <div class="w3l-footer-16-main py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 column">
+                <div class="row">
+                  <div class="col-md-4 column">
+                    <h3>Company</h3>
+                    <ul class="footer-gd-16">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="#blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 column mt-md-0 mt-4">
+                    <h3>Useful Links</h3>
+                    <ul class="footer-gd-16">
+                      <li><a href="#url">Case Studies</a></li>
+                      <li><a href="#url">Our Branches</a></li>
+                      <li><a href="#url">Latest Media</a></li>
+                      <li><a href="about.html">About Company</a></li>
+                      <li><a href="#url">Our People</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 column mt-md-0 mt-4">
+                    <h3>Our Services</h3>
+                    <ul class="footer-gd-16">
+                      <li><a href="#url">Privacy Policy</a></li>
+                      <li><a href="#url">Our Terms</a></li>
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="#landing-single.html">Landing Page</a></li>
+                      <li><a href="#url">Our People</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5"
+              >
+                <h3>Newsletter</h3>
+                <div class="end-column">
+                  <h4>Get latest updates and offers.</h4>
+                  <form action="/newsletter/" class="subscribe" method="post">
+                    {% csrf_token %}
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                      required=""
+                    />
+                    <button type="submit">Go</button>
+                  </form>
+                  <p>
+                    Sign up for our latest news & articles. We won’t give you
+                    spam mails.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="d-flex below-section justify-content-between align-items-center pt-4 mt-5"
+            >
+              <div class="columns text-lg-left text-center">
+                <p>
+                  &copy; 2021 Car Infinity. All rights reserved | Designed by
+                  <a href="#">Hrishikesh Kini</a>
+                </p>
+              </div>
+              <div class="columns-2 mt-lg-0 mt-3">
+                <ul class="social">
+                  <li>
+                    <a href="#facebook"
+                      ><span class="fa fa-facebook" aria-hidden="true"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#linkedin"
+                      ><span class="fa fa-linkedin" aria-hidden="true"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#twitter"
+                      ><span class="fa fa-twitter" aria-hidden="true"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#google"
+                      ><span class="fa fa-google-plus" aria-hidden="true"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#github"
+                      ><span class="fa fa-github" aria-hidden="true"></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+          <span class="fa fa-angle-up"></span>
+        </button>
+        <script
+          type="text/javascript"
+          src="{% static 'myapp/assets/js/script.js' %}"
+        ></script>
+
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+          crossorigin="anonymous"
+        ></script>
+        <script>
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function () {
+            scrollFunction();
+          };
+
+          function scrollFunction() {
+            if (
+              document.body.scrollTop > 20 ||
+              document.documentElement.scrollTop > 20
+            ) {
+              document.getElementById("movetop").style.display = "block";
+            } else {
+              document.getElementById("movetop").style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+        </script>
+        <!-- //move top -->
+        <script>
+          $(function () {
+            $(".navbar-toggler").click(function () {
+              $("body").toggleClass("noscroll");
+            });
+          });
+        </script>
+      </section>
+      <!-- //footer -->
+    </footer>
+
+    <!-- responsive tabs -->
+    <script src="{% static 'myapp/assets/js/easyResponsiveTabs.js' %}"></script>
+
+    <!--Plug-in Initialisation-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //Horizontal Tab
+        $("#parentHorizontalTab").easyResponsiveTabs({
+          type: "default", //Types: default, vertical, accordion
+          width: "auto", //auto or any width like 600px
+          fit: true, // 100% fit in a container
+          tabidentify: "hor_1", // The tab groups identifier
+          activate: function (event) {
+            // Callback function if tab is switched
+            var $tab = $(this);
+            var $info = $("#nested-tabInfo");
+            var $name = $("span", $info);
+            $name.text($tab.text());
+            $info.show();
+          },
+        });
+      });
+    </script>
+
+    <script src="{% static 'myapp/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script>
+      $(document).ready(function () {
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: "inline",
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: "auto",
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in",
+        });
+
+        $(".popup-with-move-anim").magnificPopup({
+          type: "inline",
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: "auto",
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-slide-bottom",
+        });
+      });
+    </script>
+
+    <!-- stats number counter-->
+    <!-- <script src="{% static 'myapp/assets/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'myapp/assets/js/jquery.countup.js' %}"></script> -->
+    <script>
+      $(".counter").countUp();
+    </script>
+    <!-- //stats number counter -->
+    <!--/MENU-JS-->
+    <script>
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+          $("#site-header").addClass("nav-fixed");
+        } else {
+          $("#site-header").removeClass("nav-fixed");
+        }
+      });
+
+      //Main navigation Active Class Add Remove
+      $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+      });
+      $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+        });
+      });
+    </script>
+    <!--//MENU-JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    {% block javascript %} {% endblock %}
+  </body>
+</html>

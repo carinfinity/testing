@@ -1,0 +1,78 @@
+{% extends 'myapp/base.html' %} {% load static %} {% block css%}
+
+<style>
+  .custom-margin {
+    margin-top: 5vh;
+  }
+
+  /* If you add background image it will look like transparent form*/
+  body {
+    background-image: linear-gradient(to bottom right, rgb(24 119 96), rgb(6 111 197));
+    background-repeat: no-repeat;
+    background-size: 100% 170%;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+{% endblock %} {% block content %}
+        <!-- ***** Preloader Start ***** -->
+        <div id="js-preloader" class="js-preloader">
+          <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <!-- ***** Preloader End ***** -->
+    <!--header-->
+
+<div class="container-fluid">
+  <div class="row justify-content-center custom-margin">
+    <div class="col-sm-6 col-md-4">
+      <!-- Add bg-primary in form tag if want form background color-->
+      <!--text-white if want text color white-->
+
+      <form action="" class="shadow-lg p-4 text-black" method="POST" style="border: solid 5px #51d19c;
+      border-radius: 34px; background: #0a70b7;">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <i style="color: #ffffff;"class="fas fa-user"></i
+          ><label for="email" style="color: #ffffff;" class="pl-2 font-weight-bold">Email</label>
+          {{form.username}}
+          <!--Add text-white below if want text color white-->
+        </div>
+        <div class="form-group">
+          <i style="color: #ffffff;" class="fas fa-key"></i
+          ><label for="pass" style="color: #ffffff;" class="pl-2 font-weight-bold">Password</label>
+          {{form.password}}
+        </div>
+        <div class="form-check">
+          <input type="checkbox" style="color: #ffffff;" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1" style="color: #ffffff;"
+            >Remember Me ?</label
+          >
+        </div>
+        <button
+          type="submit"
+          class="btn btn-outline-primary theme-button"
+        >
+          Submit
+        </button>
+      </form>
+      <a href="{% url 'myapp_user_signup' %}">Signup</a>
+    </div>
+  </div>
+</div>
+{% endblock %} 
+{% block javascript %}
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"
+></script>
+
+{% endblock %}
